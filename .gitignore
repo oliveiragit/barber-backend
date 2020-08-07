@@ -1,0 +1,8 @@
+node_modules
+.vscode
+.deployment
+.env
+.env.dev
+.env.prod
+.env.azure
+tmp/uploads/*
