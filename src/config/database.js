@@ -1,12 +1,10 @@
-require("dotenv/config");
 const enviroment = {
   development: {
     dialect: "postgres",
-    host: process.env.DATABASE_URL,
-    // host: process.env.DB_HOST,
-    // username: process.env.DB_USER,
-    // password: process.env.DB_PASS,
-    // database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
     define: {
       timestamps: true,
       underscored: true,
@@ -20,11 +18,10 @@ const enviroment = {
   },
   production: {
     dialect: "postgres",
-    host: process.env.DATABASE_URL,
-    // host: process.env.DB_HOST,
-    // username: process.env.DB_USER,
-    // password: process.env.DB_PASS,
-    // database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
     define: {
       timestamps: true,
       underscored: true,
