@@ -1,7 +1,7 @@
 require("dotenv/config");
 
 const Sequelise = require("sequelize");
-const databaseConfig = require("../config/database");
+//const databaseConfig = require("../config/database");
 const mongoose = require("mongoose");
 const User = require("../app/models/User");
 const File = require("../app/models/File");
@@ -16,7 +16,7 @@ class Database {
   }
   init() {
     try {
-      this.connection = new Sequelise(databaseConfig);
+      this.connection = new Sequelise(process.env.DATABASE_URL);
       models
         .map((model) => model.init(this.connection))
         .map(
