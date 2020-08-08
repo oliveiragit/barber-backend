@@ -1,7 +1,6 @@
 const enviroment = {
   development: {
     dialect: "postgres",
-    url: process.env.DATABASE_URL,
     host: process.env.DB_HOST,
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
@@ -14,6 +13,7 @@ const enviroment = {
   },
   production: {
     dialect: "postgres",
+    url: process.env.DATABASE_URL,
     host: process.env.DB_HOST,
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
