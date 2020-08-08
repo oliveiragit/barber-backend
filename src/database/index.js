@@ -16,7 +16,13 @@ class Database {
   }
   init() {
     try {
-      this.connection = new Sequelise(process.env.DATABASE_URL);
+      this.connection = new Sequelise(process.env.DATABASE_URL, {
+        dialectOptions: {
+          ssl: {
+            rejectUnauthorized: false,
+          },
+        },
+      });
       models
         .map((model) => model.init(this.connection))
         .map(
@@ -34,7 +40,7 @@ class Database {
         useUnifiedTopology: true,
       });
     } catch (err) {
-    return {e: 'mongo crash'};
+      return { e: "mongo crash" };
     }
   }
 }

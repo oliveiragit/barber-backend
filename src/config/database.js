@@ -12,6 +12,11 @@ const enviroment = {
       underscored: true,
       underscoredAll: true,
     },
+    dialectOptions: {
+      ssl: {
+        rejectUnauthorized: false,
+      },
+    },
   },
   production: {
     dialect: "postgres",
